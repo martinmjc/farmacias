@@ -2,6 +2,7 @@ import pandas as pd #permite trabajar con excel
 import numpy as np #para trabajar con matematicas
 import random #generar numeros aleatorios
 import copy
+from src.funciones import calculo_fitness
 
 #cargamos los datos de consumos REALES
 datosConsumoReal = pd.read_excel('data/input/ConsumoReal(MEDICAMENTOS)2022-2024.xlsx')
@@ -20,3 +21,10 @@ print("Techo presupuestario TP = ",np.round(TP,2))
 # 2) n: obtenemos la cantidad de variables en datosConsumoReal
 n = datosConsumoReal.shape[0]
 
+# Ejemplo minimo de uso de la funcion objetivo de compras
+w_ejemplo = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+x_ejemplo = np.array([[[2, 1], [0, 3]], [[4, 2], [1, 5]]])
+PRA_ejemplo = np.array([[10, 20], [30, 40]])
+PRE_ejemplo = np.array([[1, 2], [3, 4]])
+fitness_ejemplo = calculo_fitness(w_ejemplo, x_ejemplo, PRA_ejemplo, PRE_ejemplo)
+print("Fitness ejemplo = ", fitness_ejemplo)
