@@ -45,7 +45,7 @@ In summary, the code solves a medicine procurement planning problem by deciding 
 - `src/funciones.py`: funciones principales
 - `tests/`: pruebas
 - `data/input` : datasets usados como entrada al modelo
-- `data/output` : guardar resultados del modelo
+- `data/output` : guardar resultados del model
 
 ## Ejecución
 ```bash
