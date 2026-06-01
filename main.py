@@ -20,6 +20,7 @@ TP = (datosPoa["CATIDAD A PEDIR"]*datosPrecios['Precio LINAME Junio 2024']).sum(
 print("Techo presupuestario TP = ",np.round(TP,2))
 # 2) n: obtenemos la cantidad de variables en datosConsumoReal
 n = datosConsumoReal.shape[0]
+# 3) m: obtenemos la cantidad de enfermedades
 
 # Ejemplo minimo de uso de la funcion objetivo de compras
 w_ejemplo = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
